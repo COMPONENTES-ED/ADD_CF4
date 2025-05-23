@@ -259,14 +259,29 @@
             <img
               class="img-a img-t mb-4"
               src="@/assets/curso/temas/37.svg"
-              alt=""
+              alt="Ejemplo de un análisis simple en R data <-
+            read.csv(&quot datos.csv&quot) summary(data) plot(data$x, data$y,
+            main= &quot Gráfico de dispersión &quot
+              )
+              model
+              <-
+              lm(y
+              ~
+              x,
+              data=&quotdata) &quot
+              summary(model)"
             />
             <div class="row justify-content-start align-items-center mb-4">
               <div class="col-lg-auto my-lg-0 my-3">
                 <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/38.png"
-                  alt=""
+                  alt="# Ejemplo equivalente en Python import pandas as pd import
+                matplotlib.pyplot as plt from scipy import stats data =
+                pd.read_csv(&quot datos.csv& quot ) print(data.describe())
+                plt.scatter(data['x'], data['y']) plt.title(&quot Gráfico de
+                dispersión&quot ) plt.show() model = stats.linregress(data['x'],
+                data['y']) print(model)"
                 />
               </div>
               <div class="col my-lg-0 my-3">
@@ -617,14 +632,18 @@
             <img
               class="img-a img-t"
               src="@/assets/curso/temas/54.svg"
-              alt="La imagen es un código R  para generar un gráfico de dispersión y un resumen estadístico."
+              alt="Title: Análisis de Ventas. Author: Juan Pérez. Date: 2023-05-15. Output: html_document. Introducción: Este informe analiza las ventas del último trimestre. Código en R: library(ggplot2) ventas <- read.csv(ventas.csv) ggplot(ventas, aes(x=mes, y=ingresos)) + geom_bar(stat=identity)"
             />
           </div>
         </div>
         <div class="col-lg-6 my-lg-0 my-3">
           <div class="bg4 brad p-3">
             <p>A su vez, se presenta el ejemplo en Python.</p>
-            <img class="img-a img-t" src="@/assets/curso/temas/53.svg" alt="" />
+            <img
+              class="img-a img-t"
+              src="@/assets/curso/temas/53.svg"
+              alt="En Python, Jupyter Notebooks ofrece una funcionalidad similar. Los notebooks combinan celdas de código ejecutable con celdas de texto formateado en Markdown, permitiendo crear documentos interactivos que mezclan explicaciones, código y resultados. Ejemplo de un Jupyter Notebook: # %% [markdown] # Análisis de Ventas # Este notebook analiza las ventas del último trimestre. # %% import pandas as pd import matplotlib.pyplot as plt ventas = pd.read_csv(ventas.csv) plt.figure(figsize=(10,6)) plt.bar(ventas['mes'], ventas['ingresos']) plt.title(Ventas por Mes) plt.show() # %% [markdown] Como podemos ver en el gráfico anterior, las ventas han aumentado constantemente a lo largo del trimestre."
+            />
           </div>
         </div>
       </div>

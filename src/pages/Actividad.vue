@@ -10,7 +10,7 @@
               img(src="@/assets/bullets/Seleccion_Multiple.svg", alt="Texto que describa la imagen")
         .col-12.col-md-8.col-lg-9
           .titulo-segundo
-            h2 Prueba de conocimientos sobre #[i Big Data].
+            h2 Prueba de conocimientos sobre #[i Big Data:] conceptos, técnicas y herramientas
           p.mb-4 Validar el conocimiento adquirido sobre #[i Big Data]: conceptos, técnicas y herramientas. Esto se trabaja a partir de un conjunto de preguntas con opción de respuesta falso o verdadero, para buscar una dinámica de razonamiento ágil sobre opciones cerradas y reafirmar un conocimiento declarado dentro del componente.
           .tarjeta.actividad.p-3
             .row.justify-content-around.align-items-center            

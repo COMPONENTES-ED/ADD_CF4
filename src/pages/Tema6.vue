@@ -197,7 +197,7 @@
                 <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/78.svg"
-                  alt=""
+                  alt="library(dplyr) datos <- datos %>% mutate(nueva_var = var1 / var2) %>% filter(!is.na(var3)) %>% arrange(desc(nueva_var))"
                 />
               </div>
               <div class="col-lg-auto d-none d-lg-block">
@@ -351,7 +351,16 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 my-lg-0 my-3">
           <div class="bg13 p-3 brad j1 h-100">
-            <img class="img-a img-t" src="@/assets/curso/temas/83.svg" alt="" />
+            <img
+              class="img-a img-t"
+              src="@/assets/curso/temas/83.svg"
+              alt="from sklearn.model_selection import train_test_split
+              from sklearn.ensemble import RandomForestClassifier
+              from sklearn.metrics import accuracy_score
+
+              # Dividir los datos en conjuntos de entrenamiento y prueba
+              X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)"
+            />
           </div>
         </div>
         <div class="col-lg-6 my-lg-0 my-3">
@@ -361,7 +370,11 @@
                 <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/84.svg"
-                  alt="La imagen muestra los pasos de preprocesamiento. Cargar módulos de sklearn para selección de modelo, división del conjunto de datos de entrenamiento y prueba, y métricas de evaluación. Dividir los datos en conjuntos de entrenamiento y prueba. Crear y entrenar un modelo RandomForestClassifier. Hacer predicciones con el modelo entrenado y evaluar la precisión."
+                  alt="# Crear y entrenar el modelo modelo =
+                RandomForestClassifier() modelo.fit(X_train, y_train) # Hacer
+                predicciones y evaluar el modelo predicciones =
+                modelo.predict(X_test) precision = accuracy_score(y_test,
+                predicciones) print(f&quotPrecisión del modelo: {precision}&quot)"
                 />
               </div>
               <div class="col-lg-auto d-none d-lg-block">
