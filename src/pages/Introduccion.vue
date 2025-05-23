@@ -74,6 +74,10 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen="allowfullscreen"
               ></iframe>
+              <figcaption>
+                Video. Organización de la muestra de datos de acuerdo a las
+                metodologías estadísticas
+              </figcaption>
             </div>
           </figure>
         </div>
