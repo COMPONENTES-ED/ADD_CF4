@@ -77,8 +77,7 @@
             </div>
           </figure>
           <figcaption>
-            Video. Organización de la muestra de datos de acuerdo a las
-            metodologías estadísticas
+            Video. Big Data conceptos, técnicas y herramientas
           </figcaption>
         </div>
       </div>
