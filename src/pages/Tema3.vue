@@ -256,7 +256,7 @@
               principio, pero que está optimizada para operaciones vectoriales y
               matriciales comunes en estadísticas.
             </p>
-            <img
+            <!-- <img
               class="img-a img-t mb-4"
               src="@/assets/curso/temas/37.svg"
               alt="Ejemplo de un análisis simple en R data <-
@@ -270,7 +270,18 @@
               x,
               data=&quotdata) &quot
               summary(model)"
-            />
+            /> -->
+            <div class="recuadro">
+              <p>
+                # Ejemplo de un análisis simple en R <br />
+                data &lt;- read.csv ( &quot; datos.csv &quot;) <br />
+                summary(data) <br />
+                plot(data$x, data$y, main= &quot; Gráfico de dispersión &quot;
+                <br />
+                model &lt;-lm(y ~ x, data=&quot;data) &quot; <br />
+                summary(model)
+              </p>
+            </div>
             <div class="row justify-content-start align-items-center mb-4">
               <div class="col-lg-auto my-lg-0 my-3">
                 <img
@@ -302,11 +313,26 @@
             </p>
             <div class="row justify-content-start align-items-center mb-4">
               <div class="col my-lg-0 my-3">
-                <img
+                <!-- <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/39.svg"
                   alt="La imagen muestra un ejemplo en el cual  R puede leer datos de un archivo CSV, calcular un resumen estadístico, crear un gráfico de dispersión y ajustar un modelo lineal, todo en unas pocas líneas de código. "
-                />
+                /> -->
+                <div class="recuadro">
+                  <p>
+                    # Ejemplo equivalente en Python <br />
+                    import pandas as pd <br />
+                    import matplotlib.pyplot as plt <br />
+
+                    from scipy import stats <br />
+                    <br />
+                    data = pd.read_csv(&quot; datos.csv&quot;) <br />
+                    print(data.describe()) <br />
+                    plt.scatter(data['x'], data['y']) plt.title(&quot; Gráfico
+                    de dispersión&quot; ) plt.show() <br />
+                    model = stats.linregress(data['x'], data['y']) print(model)
+                  </p>
+                </div>
               </div>
               <div class="col my-lg-0 my-3">
                 <img
@@ -629,21 +655,72 @@
             alt="La imagen es un código R  para generar un gráfico de dispersión y un resumen estadístico."
           />
           <div class="bg13 brad p-3">
-            <img
+            <!-- <img
               class="img-a img-t"
               src="@/assets/curso/temas/54.svg"
               alt="Title: Análisis de Ventas. Author: Juan Pérez. Date: 2023-05-15. Output: html_document. Introducción: Este informe analiza las ventas del último trimestre. Código en R: library(ggplot2) ventas <- read.csv(ventas.csv) ggplot(ventas, aes(x=mes, y=ingresos)) + geom_bar(stat=identity)"
-            />
+            /> -->
+            <div class="recuadro">
+              <p>
+                # Informe RMarkdown en R <br />
+                title: &quot;Análisis de Ventas&quot; <br />
+                author: &quot;Juan Pérez&quot; <br />
+                date: &quot;2023-05-15&quot; <br />
+                output: html_document <br />
+                <br />
+                # Introducción <br />
+                Este informe analiza las ventas del último trimestre. <br />
+                <br />
+                ```{r} <br />
+                library(ggplot2) <br />
+                ventas &lt;- read.csv(&quot;ventas.csv&quot;) <br />
+                ggplot(ventas, aes(x=mes, y=ingresos)) +
+                geom_bar(stat=&quot;identity&quot;) <br />
+                <br />
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 my-lg-0 my-3">
           <div class="bg4 brad p-3">
             <p>A su vez, se presenta el ejemplo en Python.</p>
-            <img
+            <!-- <img
               class="img-a img-t"
               src="@/assets/curso/temas/53.svg"
               alt="En Python, Jupyter Notebooks ofrece una funcionalidad similar. Los notebooks combinan celdas de código ejecutable con celdas de texto formateado en Markdown, permitiendo crear documentos interactivos que mezclan explicaciones, código y resultados. Ejemplo de un Jupyter Notebook: # %% [markdown] # Análisis de Ventas # Este notebook analiza las ventas del último trimestre. # %% import pandas as pd import matplotlib.pyplot as plt ventas = pd.read_csv(ventas.csv) plt.figure(figsize=(10,6)) plt.bar(ventas['mes'], ventas['ingresos']) plt.title(Ventas por Mes) plt.show() # %% [markdown] Como podemos ver en el gráfico anterior, las ventas han aumentado constantemente a lo largo del trimestre."
-            />
+            /> -->
+            <div class="recuadro">
+              <p>
+                En Python, Jupyter Notebooks ofrece una funcionalidad similar.
+                Los notebooks combinan celdas de código ejecutable con celdas de
+                texto formateado en Markdown, permitiendo crear documentos
+                interactivos que mezclan explicaciones, código y resultados.
+                <br />
+                <br />
+                Ejemplo de un Jupyter Notebook: <br />
+                <br />
+                ```python <br />
+                # %% [markdown] <br />
+                ## Análisis de Ventas <br />
+                <br />
+                Este notebook analiza las ventas del último trimestre. <br />
+                <br />
+                # %% <br />
+                import pandas as pd <br />
+                import matplotlib.pyplot as plt <br />
+                <br />
+                ventas = pd.read_csv(&quot;ventas.csv&quot;) <br />
+                plt.figure(figsize=(10,6)) <br />
+                plt.bar(ventas['mes'], ventas['ingresos']) <br />
+                plt.title(&quot;Ventas por Mes&quot;) <br />
+                plt.show() <br />
+                <br />
+                # %% [markdown] <br />
+                Como podemos ver en el gráfico anterior, las ventas han
+                aumentado constantemente a lo largo del trimestre. <br />
+                ``` <br />
+              </p>
+            </div>
           </div>
         </div>
       </div>
