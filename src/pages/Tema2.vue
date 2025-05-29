@@ -237,7 +237,12 @@
         .col.pt-lg-0.pt-md-4
           p.mb-0 Los arreglos son estructuras de datos que almacenan elementos del mismo tipo en posiciones de memoria contiguas. En muchos lenguajes modernos, como Python, se utilizan listas que son más flexibles que los arreglos tradicionales. El siguiente es un ejemplo en ese lenguaje de programación. 
         .col-lg-auto
-          img.img-a.img-t(src='@/assets/curso/temas/20.svg' alt='La imagen muestra una breve descripción de cómo se utilizan las listas en lenguajes de programación modernos como Python, y luego proporciona un ejemplo de código Python simple utilizando una lista. El código de ejemplo crea una lista llamada "numeros" con los valores [1, 2, 3, 4, 5], y luego imprime el elemento en el índice 2, que es el número 3.')
+          //- img.img-a.img-t(src='@/assets/curso/temas/20.svg' alt='La imagen muestra una breve descripción de cómo se utilizan las listas en lenguajes de programación modernos como Python, y luego proporciona un ejemplo de código Python simple utilizando una lista. El código de ejemplo crea una lista llamada "numeros" con los valores [1, 2, 3, 4, 5], y luego imprime el elemento en el índice 2, que es el número 3.')
+          .recuadro.p-2.px-3
+            p.
+
+              numeros = [1, 2, 3, 4, 5] <br />
+              print(numeros[2]) # Imprime: 3 <br />
   
       Separador 
       #t_2_6.titulo-segundo.color-acento-contenido
@@ -264,7 +269,11 @@
                 span Cerrar un fichero   
   
             p Este es un ejemplo de escritura en un fichero en Python:
-            img.img-t(src='@/assets/curso/temas/24.svg' alt='La imagen presenta un ejemplo de escritura en Python. Este es: "Hola, mundo!" en un archivo llamado "ejemplo.txt"')        
+            //- img.img-t(src='@/assets/curso/temas/24.svg' alt='La imagen presenta un ejemplo de escritura en Python. Este es: "Hola, mundo!" en un archivo llamado "ejemplo.txt"')  
+            .recuadro
+              p.
+                with open('ejemplo.txt', 'w') as f: <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;f.write('Hola, mundo!') <br />
   
         .col-lg-3.my-lg-0.my-3
           img.img-a.img-t(src='@/assets/curso/temas/23.png' alt='')     
@@ -279,8 +288,13 @@
           .row.justify-content-start.align-items-center.mb-4
             .col-lg-auto.my-lg-0.my-3
               img.img-a.img-t(src='@/assets/curso/temas/25.png' alt='')
-            .col-lg-5.my-lg-0.my-3
-              img.img-a.img-t(src='@/assets/curso/temas/26.svg' alt='La imagen presenta una función en Python en la cual se saluda a una persona cuyo nombre se pasa como argumento')
+            .col-lg-8.my-lg-0.my-3
+              .recuadro.w-100
+                p.
+                  def saludar(nombre): <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;return f"Hola, {nombre}!" <br />
+                  <br />
+                  print(saludar("Ana")) # Imprime: Hola, Ana! <br />
               
           .bg9.brad.p-3
             p.mb-0 Estos fundamentos de programación son esenciales para comprender cómo se desarrollan las soluciones de #[i software] en el contexto del #[i Big Data]. En los próximos capítulos, se percibirá cómo estos conceptos se aplican en lenguajes específicos utilizados en la analítica de datos.      

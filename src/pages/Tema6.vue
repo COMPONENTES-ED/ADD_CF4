@@ -126,11 +126,22 @@
                 />
               </div>
               <div class="col pt-lg-0 pt-md-4">
-                <img
+                <!-- <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/74.svg"
                   alt="La imagen muestra los pasos de preprocesamiento de datos en Python usando la librería pandas."
-                />
+                /> -->
+                <div class="recuadro">
+                  <p>
+                    import pandas as pd <br />
+                    # Cargar datos <br />
+                    df = pd.read_csv('datos.csv') <br />
+                    # Convertir columna a tipo datetime <br />
+                    df['fecha'] = pd.to_datetime(df['fecha']) <br />
+                    # Convertir variable categórica a tipo dummy <br />
+                    df = pd.get_dummies(df, columns=['categoria']) <br />
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -194,11 +205,23 @@
           <div class="bg13 brad p-3">
             <div class="row justify-content-center align-items-center">
               <div class="col">
-                <img
+                <!-- <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/78.svg"
                   alt="library(dplyr) datos <- datos %>% mutate(nueva_var = var1 / var2) %>% filter(!is.na(var3)) %>% arrange(desc(nueva_var))"
-                />
+                /> -->
+                <div class="recuadro">
+                  <p>
+                    library(dplyr) <br />
+                    datos &lt;- datos %&gt;% <br />
+                    &nbsp;&nbsp;mutate(nueva_var = var1 / var2) %&gt;% # Crear
+                    nueva variable <br />
+                    &nbsp;&nbsp;filter(!is.na(var3)) %&gt;% # Eliminar filas con
+                    NA en var3 <br />
+                    &nbsp;&nbsp;arrange(desc(nueva_var)) # Ordenar por nueva_var
+                    en orden descendente <br />
+                  </p>
+                </div>
               </div>
               <div class="col-lg-auto d-none d-lg-block">
                 <img
@@ -329,7 +352,22 @@
             </ul>
           </div>
           <div class="bg2 p-3 brad j1">
-            <img class="img-a img-t" src="@/assets/curso/temas/81.svg" alt="" />
+            <!-- <img class="img-a img-t" src="@/assets/curso/temas/81.svg" alt="" /> -->
+            <div class="recuadro bg-white">
+              <p>
+                import re <br />
+                <br />
+                texto = "El correo de Juan es juan@example.com y su teléfono es
+                123-456-7890" <br />
+                email =
+                re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b',
+                texto) <br />
+                telefono = re.search(r'\d{3}-\d{3}-\d{4}', texto) <br />
+                <br />
+                print(email.group()) # Imprime: juan@example.com <br />
+                print(telefono.group()) # Imprime: 123-456-7890 <br />
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-lg-4 my-lg-0 my-3 j1">
@@ -351,7 +389,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 my-lg-0 my-3">
           <div class="bg13 p-3 brad j1 h-100">
-            <img
+            <!-- <img
               class="img-a img-t"
               src="@/assets/curso/temas/83.svg"
               alt="from sklearn.model_selection import train_test_split
@@ -360,14 +398,26 @@
 
               # Dividir los datos en conjuntos de entrenamiento y prueba
               X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)"
-            />
+            /> -->
+            <div class="recuadro">
+              <p>
+                from sklearn.model_selection import train_test_split <br />
+                from sklearn.ensemble import RandomForestClassifier <br />
+                from sklearn.metrics import accuracy_score <br />
+                <br />
+                # Dividir los datos en conjuntos de entrenamiento y prueba
+                <br />
+                X_train, X_test, y_train, y_test = train_test_split(X, y,
+                test_size=0.2) <br />
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 my-lg-0 my-3">
           <div class="bgi p-3 brad j1 h-100">
             <div class="row justify-content-center align-items-center">
               <div class="col">
-                <img
+                <!-- <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/84.svg"
                   alt="# Crear y entrenar el modelo modelo =
@@ -375,7 +425,19 @@
                 predicciones y evaluar el modelo predicciones =
                 modelo.predict(X_test) precision = accuracy_score(y_test,
                 predicciones) print(f&quotPrecisión del modelo: {precision}&quot)"
-                />
+                /> -->
+                <div class="recuadro">
+                  <p>
+                    # Crear y entrenar el modelo <br />
+                    modelo = RandomForestClassifier() <br />
+                    modelo.fit(X_train, y_train) <br />
+                    <br />
+                    # Hacer predicciones y evaluar el modelo <br />
+                    predicciones = modelo.predict(X_test) <br />
+                    precision = accuracy_score(y_test, predicciones) <br />
+                    print(f"Precisión del modelo: {precision}") <br />
+                  </p>
+                </div>
               </div>
               <div class="col-lg-auto d-none d-lg-block">
                 <img
@@ -410,11 +472,25 @@
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-8">
               <div class="bg13 brad p-3 j1 h-100">
-                <img
+                <!-- <img
                   class="img-a img-t"
                   src="@/assets/curso/temas/88.svg"
                   alt=""
-                />
+                /> -->
+                <div class="recuadro">
+                  <p>
+                    from fuzzywuzzy import process <br />
+                    <br />
+                    nombres = ["John Smith", "Jane Doe", "John Smth", "Jane Do"]
+                    <br />
+                    <br />
+                    # Encontrar coincidencias cercanas para "John Smith" <br />
+                    coincidencias = process.extract("John Smith", nombres,
+                    limit=2) <br />
+                    print(coincidencias) # [('John Smith', 100), ('John Smth',
+                    95)] <br />
+                  </p>
+                </div>
               </div>
             </div>
             <div class="col-lg-4 d-none d-lg-block">
